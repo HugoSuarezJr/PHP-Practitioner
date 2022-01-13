@@ -20,7 +20,7 @@
 
         $person = $_GET['person'];
 
-        echo "<h1> Hello $person <h1>";
+        echo "<h1> Hello $person is this your name? --> $person<h1>";
 
     ?>
 </header>
