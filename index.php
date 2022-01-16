@@ -15,15 +15,9 @@
 </head>
 <body>
 
-<header>
-    <?php
-
-        $person = $_GET['person'];
-
-        echo "<h1> Hello $person is this your name? --> $person<h1>";
-
-    ?>
-</header>
+    <h1>
+        <?= "Hi, you are " . htmlspecialchars($_GET['age']); ?> years old
+    </h1>
     
 </body>
 </html>
