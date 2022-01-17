@@ -18,6 +18,10 @@
     <h1>
         <?= "Hi, you are " . htmlspecialchars($_GET['age']); ?> years old
     </h1>
+    <hr>
+    <h2>
+        <?= "And your favorite hobby is " . htmlspecialchars($_GET['hobby']); ?>!
+    </h2>
     
 </body>
 </html>
