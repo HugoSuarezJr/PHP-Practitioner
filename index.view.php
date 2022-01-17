@@ -16,10 +16,15 @@
 <body>
 
     <ul>
-        <?php foreach($animals as $animal) : ?>
-            <li>
-                <?= $animal ?>
-            </li>
+        <?php foreach($task as $title => $val) : ?>
+        <li>
+            <strong>
+               <?= $title . ":"?> 
+            </strong>
+            <strong>
+                <?= $val ?>
+            </strong>
+        </li>
         <?php endforeach ?>
     </ul>
     
