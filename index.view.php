@@ -13,19 +13,23 @@
         }
     </style>
 </head>
-<body>
+<body >
+
+<h1>Task for Today</h1>
 
     <ul>
-        <?php foreach($task as $title => $val) : ?>
         <li>
-            <strong>
-               <?= $title . ":"?> 
-            </strong>
-            <strong>
-                <?= $val ?>
-            </strong>
+            <strong>Name: <?= $task['title']; ?></strong>
         </li>
-        <?php endforeach ?>
+        <li>
+            <strong>Date: <?= ucwords($task['due']); ?></strong>
+        </li>
+        <li>
+            <strong>Person Responsible: <?= $task['assigned_to']; ?></strong>
+        </li>
+        <li>
+            <strong>Status: <?= $task['completed'] ? "Completed": "Incomplete"; ?></strong>
+        </li>
     </ul>
     
     
