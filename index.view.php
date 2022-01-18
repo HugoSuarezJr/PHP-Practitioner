@@ -28,10 +28,22 @@
             <strong>Person Responsible: <?= $task['assigned_to']; ?></strong>
         </li>
         <li>
-            <strong>Status: <?= $task['completed'] ? "Completed": "Incomplete"; ?></strong>
+            <strong>Status: </strong>
+            <?php if($task['completed']) : ?>
+                <span>&#128077</span>
+            <?php else : ?>
+                <span>&#128078</span>
+            <?php endif ?>
+        </li>
+        <li>
+            <strong>Is this an urgent task?: </strong>
+            <?php if(! $task['urgent']) : ?>
+                <span>No</span>
+                <?php else : ?>
+                    <strong>YES</strong>
+            <?php endif ?>
         </li>
     </ul>
-    
     
 </body>
 </html>
