@@ -1,15 +1,21 @@
+<h1>
+    Are you old enough to enter the club?
+</h1>
+
 <?php
+    require 'functions.php';
+
+    $age = 20;
 
     
-    $task = [
-        "title" => "Buy Gorceries",
-        "due" => "tomorrow",
-        "assigned_to" => "Marco",
-        "completed" => false,
-        "urgent" => false
-    ];
+    // $animals = ['Dog', 'Cat', 'Elephant'];
 
-    require "index.view.php";
+    // dumper($animals);
+
+    
+    bouncer($age);
+
+    // require "index.view.php";
 
 
 
