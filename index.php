@@ -5,7 +5,7 @@
 <?php
     require 'functions.php';
 
-    $age = 20;
+    $age = 25;
 
     
     // $animals = ['Dog', 'Cat', 'Elephant'];
