@@ -1,22 +1,18 @@
-<h1>
-    Are you old enough to enter the club?
-</h1>
-
 <?php
-    require 'functions.php';
 
-    $age = 25;
+class Task {
+    protected $description;
+    protected $completed = false ;
+    public function __construct($description){
+        $this->description = $description;
+    }
 
-    
-    // $animals = ['Dog', 'Cat', 'Elephant'];
+}
 
-    // dumper($animals);
+$newTask = new Task('Go to the gym');
 
-    
-    bouncer($age);
-
-    // require "index.view.php";
+var_dump()
 
 
-
+require 'index.view.php';
 ?>
