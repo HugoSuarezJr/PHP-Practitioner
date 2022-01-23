@@ -14,36 +14,18 @@
     </style>
 </head>
 <body >
-    <?php require 'functions.php' ?>
-
-<h1>Task for Today</h1>
-
     <ul>
-        <li>
-            <strong>Name: <?= $task['title']; ?></strong>
-        </li>
-        <li>
-            <strong>Date: <?= ucwords($task['due']); ?></strong>
-        </li>
-        <li>
-            <strong>Person Responsible: <?= $task['assigned_to']; ?></strong>
-        </li>
-        <li>
-            <strong>Status: </strong>
-            <?php if($task['completed']) : ?>
-                <span>&#128077</span>
-            <?php else : ?>
-                <span>&#128078</span>
-            <?php endif ?>
-        </li>
-        <li>
-            <strong>Is this an urgent task?: </strong>
-            <?php if(! $task['urgent']) : ?>
-                <span>No</span>
-                <?php else : ?>
-                    <strong>YES</strong>
-            <?php endif ?>
-        </li>
+        <?php foreach ($tasks as $task) : ?>
+            <li>
+                <?php if($task->completed) : ?>
+                    <strike><?= $task->description; ?></strike>
+                <?php else: ?>
+                    <?= $task->description; ?>
+                <?php endif; ?>
+            </li>
+
+        <?php endforeach; ?>
+
     </ul>
     
 </body>
