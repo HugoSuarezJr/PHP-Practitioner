@@ -14,6 +14,7 @@
     </style>
 </head>
 <body >
+    <?php require 'functions.php' ?>
 
 <h1>Task for Today</h1>
 

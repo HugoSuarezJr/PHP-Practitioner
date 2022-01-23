@@ -11,8 +11,10 @@ class Task {
 
 $newTask = new Task('Go to the gym');
 
-var_dump()
+var_dump($newTask);
 
 
 require 'index.view.php';
+
+
 ?>
