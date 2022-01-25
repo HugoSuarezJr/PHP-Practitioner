@@ -2,11 +2,16 @@
 
 require 'functions.php';
 
-$database = require 'bootstrap.php';
+$database = require 'core/bootstrap.php';
 
-$tasks = $database->selectAll('todos');
+// $router = new Router;
 
-cleanDump($tasks);
-// dd($tasks);
+// require 'routes.php';
 
-require 'index.view.php';
+$uri = trim($_SERVER['REQUEST_URI'], '/');
+
+// require $router->direct($uri);
+
+
+require Router::load('routes.php')
+    ->direct($uri);
