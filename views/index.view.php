@@ -1,5 +1,4 @@
-
-<?php require('partials/nav.php'); ?>
+<?php require('partials/head.php'); ?>
 <ul>
     <?php foreach ($tasks as $task) : ?>
         <li>
