@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Contact Us</h1>
+    <p>This is your contact name <?= $contact ?></p>
 </body>
 </html>
