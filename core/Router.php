@@ -8,7 +8,7 @@ class Router{
 
         require $file;
 
-        return $return;
+        return $router;
     }
 
     public function define($routes){
