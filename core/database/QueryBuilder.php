@@ -18,4 +18,11 @@ class QueryBuilder {
         return $statement->fetchAll(PDO::FETCH_CLASS);  
     }
 
+    public function newTask($table, $description, $completed){
+
+        $statement = $this->pdo->prepare("insert into {$table}(description,completed) values('$description', {$completed})");
+
+        $statement->execute();
+    }
+
 }
