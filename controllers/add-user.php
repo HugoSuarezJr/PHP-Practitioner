@@ -1,6 +1,6 @@
 <?php
 
-// Jeff's way
+// Jeff's way used for multiple parameters
 // $app['database']->insert('users', [
 //     'name' => $_POST['name']
 // ]);
