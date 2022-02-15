@@ -19,8 +19,7 @@ class QueryBuilder {
     }
 
     public function newTask($table, $description, $completed){
-        var_export($completed);
-        $statement = $this->pdo->prepare("insert into {$table}(description,completed) values('program', false)");
+        $statement = $this->pdo->prepare("insert into {$table}(description,completed) values('$description', $completed)");
 
         $statement->execute();
     }

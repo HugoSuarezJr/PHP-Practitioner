@@ -1,17 +1,10 @@
 <?php
 
-$newDescription = $_POST['description'];
-$newTaskCompleted = $_POST['completed'];
+$description = $_POST['description'];
+$completed = $_POST['completed'];
 
 
-if($newTaskCompleted === 'true'){
-    $newTaskCompleted = true;
-} else {
-    $newTaskCompleted = false;
-};
-
-
-$app['database']->newTask('todos', $newDescription, $newTaskCompleted);
+$app['database']->newTask('todos', $description, $completed);
 
 
 
