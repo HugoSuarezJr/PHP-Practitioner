@@ -24,16 +24,30 @@ class QueryBuilder {
         $statement->execute();
     }
 
-    public function insert($table, $parameters){
-        $sql = sprintf(
-            'insert into %s (%s) values (%s)',
-            $table, 
-            implode(', ', array_keys($parameters)),
-            ':' . implode(', :', array_keys($parameters))
-        );
-        try {
-            $statement = $this->pdo->prepare($sql);
-            $statement->execute($parameters);
+    // Jeff's way used for multiple paramaters  
+    // public function insert($table, $parameters){
+    //     $sql = sprintf(
+    //         'insert into %s (%s) values (%s)',
+    //         $table, 
+    //         implode(', ', array_keys($parameters)),
+    //         ':' . implode(', :', array_keys($parameters))
+    //     );
+    //     try {
+    //         $statement = $this->pdo->prepare($sql);
+    //         $statement->execute($parameters);
+    //     } catch (Exception $e) {
+    //         die('Whoops, something went wrong.');
+    //     }
+   
+    // }
+
+    // My way
+    public function insert($table, $name){
+
+        try{
+        $statement = $this->pdo->prepare("insert into {$table}(name) values('$name')");
+
+        $statement->execute();
         } catch (Exception $e) {
             die('Whoops, something went wrong.');
         }
