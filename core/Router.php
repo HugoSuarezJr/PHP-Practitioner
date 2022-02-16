@@ -27,6 +27,8 @@ class Router{
     public function direct($uri, $requestType){
         // example.com/about/culture
         if(array_key_exists($uri, $this->routes[$requestType])){
+            // PagesController@home
+            die($this->routes[$requestType][$uri]);
             return $this->routes[$requestType][$uri];
         }
         throw new Exception('No routes defined for this URI.');
