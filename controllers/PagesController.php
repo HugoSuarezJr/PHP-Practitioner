@@ -7,10 +7,13 @@ class PagesController {
         // Return a response.
         $users = App::get('database')->selectAll('users');
 
-        require 'views/index.view.php';
+        return view('index', compact('users'));
+        // return view('index', ['users' => $users]);
     }
     public function about(){
-        require 'views/about.view.php';
+        $company = 'SHI';
+    
+        return view('about', compact('company'));
     }
     public function newTask(){
         $description = $_POST['description'];
@@ -20,7 +23,8 @@ class PagesController {
 
         $tasks = App::get('database')->selectAll('todos');
 
-        require 'views/new-task.view.php';
+
+        return view('new-task', compact('tasks', 'description'));
     }
     public function newUser(){
         // Jeff's way used for multiple parameters
@@ -35,6 +39,6 @@ class PagesController {
     }
     public function contact(){
         $contact = "YEP THATS ME";
-        require 'views/contact.view.php';
+        return view('contact');
     }
 }
