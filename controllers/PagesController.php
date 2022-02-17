@@ -5,9 +5,7 @@ class PagesController {
         // Receive the request.
         // Delegate.
         // Return a response.
-        $users = App::get('database')->selectAll('users');
-
-        return view('index', compact('users'));
+        return view('index');
         // return view('index', ['users' => $users]);
     }
     public function about(){
@@ -35,10 +33,10 @@ class PagesController {
         // My way
         App::get('database')->insert('users', $_POST['name']);
 
-        header('Location: /');
+        return view('');
     }
     public function contact(){
         $contact = "YEP THATS ME";
-        return view('contact');
+        return view('contact', compact('contact'));
     }
 }
