@@ -13,17 +13,7 @@ class PagesController {
     
         return view('about', compact('company'));
     }
-    public function newTask(){
-        $description = $_POST['description'];
-        $completed = $_POST['completed'];
 
-        App::get('database')->newTask('todos', $description, $completed);
-
-        $tasks = App::get('database')->selectAll('todos');
-
-
-        return view('new-task', compact('tasks', 'description'));
-    }
     public function newUser(){
         // Jeff's way used for multiple parameters
         // $app['database']->insert('users', [

@@ -21,6 +21,7 @@ class ComposerStaticInit2cf1a602ea97adc9fc5c13dcef47ae10
         'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
         'Request' => __DIR__ . '/../..' . '/core/Request.php',
         'Router' => __DIR__ . '/../..' . '/core/Router.php',
+        'TasksController' => __DIR__ . '/../..' . '/controllers/TasksController.php',
         'UsersController' => __DIR__ . '/../..' . '/controllers/UsersController.php',
     );
 
