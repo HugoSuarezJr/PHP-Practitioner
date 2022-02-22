@@ -1,5 +1,10 @@
 <?php
 
+// AC/DC => Rock or Bust => Dogs of War
+
+namespace App\Controllers;
+
+
 class PagesController {
     public function home(){
         // Receive the request.
